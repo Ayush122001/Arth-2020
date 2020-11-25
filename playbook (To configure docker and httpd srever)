@@ -1,4 +1,4 @@
-- hosts: slave1
+- hosts: all
   tasks:
           - yum_repository: 
              name: docker-repo 

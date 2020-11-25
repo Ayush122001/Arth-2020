@@ -6,7 +6,7 @@
              baseurl: https://download.docker.com/linux/centos/7/x86_64/stable/  
              gpgcheck: 0
 
-          - shell:  
+          - command:  
              yum install --nobest docker-ce -y
 
           - service: 
@@ -17,9 +17,8 @@
              name: python3 
              state: present
 
-          - pip: 
-             name: docker-py 
-             state: present
+          - command: 
+             pip3 install docker-py
 
           - docker_image: 
              name: httpd

@@ -7,7 +7,7 @@
              gpgcheck: 0
 
           - shell:  
-             cmd: yum install --nobest docker-ce 
+             yum install --nobest docker-ce 
 
           - service: 
              name: docker 
